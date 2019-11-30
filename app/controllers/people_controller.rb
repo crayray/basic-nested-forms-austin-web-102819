@@ -5,6 +5,7 @@ class PeopleController < ApplicationController
 
   def create    
     Person.create(person_params)
+    byebug
     redirect_to people_path
   end
 
@@ -15,6 +16,6 @@ class PeopleController < ApplicationController
   private
 
   def person_params
-    params.require(:person).permit(:name)
+    params.require(:person).permit(:name )
   end
 end
